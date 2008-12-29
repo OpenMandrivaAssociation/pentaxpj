@@ -1,12 +1,13 @@
 Summary:	Pentax PocketJet Printer Driver
 Name:		pentaxpj
 Version:	1.0.0
-Release:	%mkrel 6
+Release:	%mkrel 7
 License:	GPL
 Group:		System/Printing
 URL:		http://www.pragana.net/gdiprinters.html
 Source0:	http://www.pragana.net/%{name}-%{version}.tar.gz
 Patch0:		pentaxpj-glibc28_fix.diff
+Patch1:		pentaxpj-1.0.0-LDFLAGS.diff
 Conflicts:	printer-utils = 2007
 Conflicts:	printer-filters = 2007
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
@@ -21,6 +22,7 @@ Pentax PocketJet Printer Driver for the families:
 
 %setup -q -n %{name}
 %patch0 -p0
+%patch1 -p0
 
 find . -type d -perm 0700 -exec chmod 755 {} \;
 find . -type f -perm 0555 -exec chmod 755 {} \;
@@ -32,7 +34,7 @@ done
     
 %build
 
-%make CFLAGS="%{optflags} -DLONG_FORM_FEED"
+%make CFLAGS="%{optflags} -DLONG_FORM_FEED" LDFLAGS="%{ldflags}"
 
 %install
 rm -rf %{buildroot}
