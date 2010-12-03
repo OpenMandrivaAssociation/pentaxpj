@@ -1,7 +1,7 @@
 Summary:	Pentax PocketJet Printer Driver
 Name:		pentaxpj
 Version:	1.0.0
-Release:	%mkrel 9
+Release:	%mkrel 10
 License:	GPL
 Group:		System/Printing
 URL:		http://www.pragana.net/gdiprinters.html
