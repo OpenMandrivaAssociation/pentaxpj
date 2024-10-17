@@ -4,7 +4,7 @@ Version:	1.0.0
 Release:	23
 License:	GPLv2
 Group:		System/Printing
-Url:		http://www.pragana.net/gdiprinters.html
+Url:		https://www.pragana.net/gdiprinters.html
 Source0:	http://www.pragana.net/%{name}-%{version}.tar.gz
 Patch0:		pentaxpj-glibc28_fix.diff
 Patch1:		pentaxpj-1.0.0-LDFLAGS.diff
