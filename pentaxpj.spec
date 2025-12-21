@@ -9,6 +9,7 @@ Source0:	http://www.pragana.net/%{name}-%{version}.tar.gz
 Patch0:		pentaxpj-glibc28_fix.diff
 Patch1:		pentaxpj-1.0.0-LDFLAGS.diff
 
+BuildRequires:	make
 %description
 Pentax PocketJet Printer Driver for the families:
 
